@@ -27,4 +27,14 @@ public interface UserConstant {
      */
     int ADMIN_ROLE = 1;
 
+    /**
+     * 锁
+     */
+    String JOIN_TEAM = "yupao:join_team";
+
+    /**
+     * 锁
+     */
+    String PRECACHEJOB = "yupao:precachejob:docache:lock";
+
 }

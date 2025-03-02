@@ -1,25 +1,19 @@
-package com.yupi.usercenter.model.domain;
+package com.yupi.usercenter.model.vo;
 
-import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 用户实体
- *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * 用户包装类
  */
-@TableName(value = "user")
 @Data
-public class User implements Serializable {
-    private static final long serialVersionUID = -5752925097731211120L;
+public class UserVO implements Serializable {
+    private static final long serialVersionUID = -7918696905645407298L;
     /**
      * id
      */
-    @TableId(type = IdType.AUTO)
     private long id;
 
     /**
@@ -48,11 +42,6 @@ public class User implements Serializable {
     private Integer gender;
 
     /**
-     * 密码
-     */
-    private String userPassword;
-
-    /**
      * 电话
      */
     private String phone;
@@ -78,12 +67,6 @@ public class User implements Serializable {
     private Date updateTime;
 
     /**
-     * 是否删除
-     */
-    @TableLogic
-    private Integer isDelete;
-
-    /**
      * 用户角色 0 - 普通用户 1 - 管理员
      */
     private Integer userRole;
@@ -92,9 +75,4 @@ public class User implements Serializable {
      * 星球编号
      */
     private String planetCode;
-
-    // https://github.com/liyupi
-
 }
-
-// [加入编程导航](https://yupi.icu) 深耕编程提升【两年半】、国内净值【最高】的编程社群、用心服务【20000+】求学者、帮你自学编程【不走弯路】
