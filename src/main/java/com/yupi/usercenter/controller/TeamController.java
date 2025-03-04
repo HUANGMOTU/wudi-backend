@@ -32,7 +32,6 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/team")
-@CrossOrigin(origins = {"http://wudi.wudi-nav.xyz", "http://localhost:8000"}, allowCredentials = "true")
 @Slf4j
 public class TeamController {
 

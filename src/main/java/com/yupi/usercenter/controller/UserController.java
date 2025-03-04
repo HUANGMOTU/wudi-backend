@@ -34,7 +34,6 @@ import static com.yupi.usercenter.contant.UserConstant.USER_LOGIN_STATE;
  */
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = {"http://wudi.wudi-nav.xyz", "http://localhost:8000"}, allowCredentials = "true")
 @Slf4j
 public class UserController {
 
@@ -104,7 +103,7 @@ public class UserController {
     }
 
     /**
-     * 获取当前用户
+     * 获取当前用户 结合cookie和session
      *
      * @param request
      * @return
@@ -122,8 +121,6 @@ public class UserController {
         User safetyUser = userService.getSafetyUser(user);
         return ResultUtils.success(safetyUser);
     }
-
-    // https://yupi.icu/
 
     @GetMapping("/search")
     public BaseResponse<List<User>> searchUsers(String username, HttpServletRequest request) {
