@@ -1,4 +1,4 @@
-package com.yupi.usercenter;
+package com.yupi.usercenter.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
